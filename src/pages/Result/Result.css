@@ -1,0 +1,33 @@
+.result-wrapper {
+	min-height: 100vh;
+	background-color: var(--bg-color);
+}
+
+.result-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 7rem;
+}
+
+.quiz-card {
+	margin: 5rem 0;
+}
+
+.result-container > .quiz-section-1 > h5,
+h3 {
+	margin-top: 2rem;
+}
+
+.correct-option {
+	background-color: #1ece5f;
+}
+
+.wrong-option {
+	background-color: #d62525;
+}
+
+.final-result > .question {
+	margin-top: 3rem;
+}
