@@ -87,7 +87,9 @@ export const Questions = () => {
 						</button>
 					) : (
 						<button
-							className="btn btn-primary"
+							className={
+								!optionDisabled ? "btn not-selected" : "btn btn-primary"
+							}
 							disabled={btnDisabled}
 							onClick={nextQuestionHandler}
 						>
