@@ -1,0 +1,18 @@
+.nav-bar {
+	padding: 2rem 5rem;
+	background-color: var(--nav-bg-color);
+	height: 7rem;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+.nav-bar > .nav-brand-title > a {
+	color: var(--cta-color);
+}
+
+.btn-nav {
+	padding: 0.8rem 2rem;
+	color: var(--nav-bg-color);
+	background-color: var(--cta-color);
+}
