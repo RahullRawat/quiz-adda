@@ -1,0 +1,88 @@
+.login-container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color);
+}
+
+.login {
+	width: 40rem;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	background-color: var(--light-white-color);
+}
+
+.login-title {
+	text-align: center;
+	font-weight: 900;
+	margin-bottom: 2rem;
+}
+
+.login-form > input {
+	width: 100%;
+	margin: 0.4rem 0 2rem;
+	padding: 1rem;
+}
+
+.forgot-password {
+	font-size: 1.2rem;
+}
+
+.btn-login {
+	font-size: 1.7rem;
+	width: 100%;
+	background-color: var(--nav-bg-color);
+	margin-top: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	font-weight: 700;
+	opacity: 0.9;
+}
+
+.btn-login:hover {
+	opacity: 1;
+}
+
+.btn-guest-login {
+	font-size: 1.6rem;
+	width: 100%;
+	color: var(--nav-bg-color);
+	background-color: transparent;
+	border: 1.5px solid var(--nav-bg-color);
+	margin-top: 1rem;
+	text-transform: capitalize;
+	letter-spacing: 0.1rem;
+	font-weight: 700;
+}
+
+.btn-guest-login:hover {
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.no-account {
+	font-size: 1.4rem;
+	margin: 1rem 0;
+	text-align: center;
+	letter-spacing: 0.1rem;
+}
+
+.no-account a {
+	text-decoration: underline;
+}
+
+.term-condition {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.term-condition > input {
+	margin-right: 0.5rem;
+}
+
+.login-error-msg,
+.signup-error-msg {
+	margin-bottom: 2rem;
+}
