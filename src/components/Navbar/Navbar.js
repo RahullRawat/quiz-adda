@@ -1,19 +1,19 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import "./Navbar.css";
 
 export const Navbar = () => {
-	// const {
-	// 	authState: { token },
-	// 	logout,
-	// 	authDispatch,
-	// } = useAuth();
+	const {
+		authState: { token },
+		logout,
+		authDispatch,
+	} = useAuth();
 
 	const navigate = useNavigate();
 
 	const logoutHandler = async () => {
-		// await logout();
+		await logout();
 		authDispatch({ type: "LOGOUT" });
 		navigate("/");
 	};
@@ -23,7 +23,7 @@ export const Navbar = () => {
 				<Link to="/">QuizAdda</Link>
 			</div>
 			<div className="nav-links">
-				{/* {token ? (
+				{token ? (
 					<Link to="/" className="btn btn-nav" onClick={logoutHandler}>
 						Logout
 					</Link>
@@ -31,10 +31,7 @@ export const Navbar = () => {
 					<Link to="/login" className="btn btn-nav">
 						Login
 					</Link>
-				)} */}
-				<Link to="/login" className="btn btn-nav">
-					Login
-				</Link>
+				)}
 			</div>
 		</div>
 	);

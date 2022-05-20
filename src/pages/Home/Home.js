@@ -2,26 +2,26 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context/QuizContext";
-// import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import "./Home.css";
 
 export const Home = () => {
 	const navigate = useNavigate();
-	// const {
-	// 	authState: { token },
-	// } = useAuth();
+	const {
+		authState: { token },
+	} = useAuth();
 	const {
 		quizState: { questions },
 		quizDispatch,
 	} = useQuiz();
 
 	const startQuizHandler = (category) => {
-		// if (token) {
-		navigate(`/rules/${category}`);
-		quizDispatch({ type: "RESET" });
-		// } else {
-		// navigate("/login");
-		// }
+		if (token) {
+			navigate(`/rules/${category}`);
+			quizDispatch({ type: "RESET" });
+		} else {
+			navigate("/login");
+		}
 	};
 
 	const fetchQuestions = async () => {
