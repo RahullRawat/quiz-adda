@@ -1,4 +1,4 @@
-import { Navbar } from "./components";
+import { Navbar, RequireAuth } from "./components";
 import { Home, Login, Questions, Result, Rules, Signup } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -23,30 +23,30 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				{/* <Route path="/login" element={<Login />} /> */}
-				{/* <Route path="/signup" element={<Signup />} /> */}
+				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
 				<Route
 					path="/rules/:category"
 					element={
-						// <RequireAuth>
-						<Rules />
-						// </RequireAuth>
+						<RequireAuth>
+							<Rules />
+						</RequireAuth>
 					}
 				/>
 				<Route
 					path="/questions/:category"
 					element={
-						// <RequireAuth>
-						<Questions />
-						// </RequireAuth>
+						<RequireAuth>
+							<Questions />
+						</RequireAuth>
 					}
 				/>
 				<Route
 					path="/result/:category"
 					element={
-						// <RequireAuth>
-						<Result />
-						// </RequireAuth>
+						<RequireAuth>
+							<Result />
+						</RequireAuth>
 					}
 				/>
 			</Routes>
