@@ -1,0 +1,60 @@
+.rules-wrapper {
+	background-color: var(--bg-color);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rules-container {
+	width: 600px;
+	margin: auto;
+	background-color: var(--light-white-color);
+	padding: 2rem;
+	color: var(--nav-bg-color);
+	border-radius: 1rem;
+}
+
+.rules-container > h1 {
+	margin-bottom: 2rem;
+}
+
+.rules-container > .rules {
+	max-width: 500px;
+}
+
+.rules-container > .rules > p {
+	font-size: 2.2rem;
+	margin-top: 1rem;
+}
+
+.rules-btn {
+	margin-top: 2rem;
+}
+
+.rules-btn > a > .btn {
+	font-weight: 700;
+	background-color: var(--nav-bg-color);
+	margin: 0.5rem;
+}
+
+@media screen and (max-width: 425px) {
+	.rules-container {
+		width: 350px;
+	}
+
+	.rules-container > h1 {
+		font-size: 3rem;
+	}
+
+	.rules-container > .rules > p {
+		font-size: 1.8rem;
+		font-weight: 600;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.rules-container {
+		width: 300px;
+	}
+}
